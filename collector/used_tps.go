@@ -82,6 +82,11 @@ func NewBlockCollector() (Collector, error) {
 			"Usechain maximum block size in recent 100 blocks",
 			nil, nil,
 		),
+		avgTxperBlock: prometheus.NewDesc(
+			used_namespace+"_avgTxperBlock",
+			"Usechain average tx number per block",
+			nil, nil,
+		),
 	}, nil
 }
 
